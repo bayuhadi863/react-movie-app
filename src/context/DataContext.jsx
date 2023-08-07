@@ -1,17 +1,18 @@
-// import { createContext, useState, useEffect } from 'react';
-// import { BASE_URL, API_KEY, fetchData } from '../api/base';
+import { createContext, useState, useEffect } from 'react';
+import { BASE_URL, API_KEY, fetchData } from '../api/base';
 
-// const DataContext = createContext({});
+const DataContext = createContext({});
 
-// export const DataProvider = ({ children }) => {
+export const DataProvider = ({ children }) => {
+  const [searchTyping, setSearchTyping] = useState('');
+  const [searchSubmit, setSearchSubmit] = useState('');
 
-//   return (
-//     <DataContext.Provider
-//       value={{ }}
-//     >
-//       {children}
-//     </DataContext.Provider>
-//   );
-// };
+  useEffect(() => {
+  
+    console.log('searchSubmit changed:', searchSubmit);
+  }, [searchSubmit]);
 
-// export default DataContext;
+  return <DataContext.Provider value={{ searchTyping, setSearchTyping, searchSubmit, setSearchSubmit }}>{children}</DataContext.Provider>;
+};
+
+export default DataContext;

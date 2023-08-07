@@ -8,22 +8,22 @@ const Footer = () => {
     <footer className="container-fluid py-5 bg-black">
       <div className="row">
         <div className="d-flex flex-wrap justify-content-center gap-4">
-          <Link className="custom-link" style={{ textDecoration: 'none' }}>
+          <Link to="/" className="custom-link" style={{ textDecoration: 'none' }}>
             Home
           </Link>
-          <Link className="custom-link" style={{ textDecoration: 'none' }}>
+          <Link to="/trending" className="custom-link" style={{ textDecoration: 'none' }}>
             Trending
           </Link>
-          <Link className="custom-link" style={{ textDecoration: 'none' }}>
+          <Link to="/popular" className="custom-link" style={{ textDecoration: 'none' }}>
             Popular
           </Link>
-          <Link className="custom-link" style={{ textDecoration: 'none' }}>
+          <Link to="/now_playing" className="custom-link" style={{ textDecoration: 'none' }}>
             Now Playing
           </Link>
-          <Link className="custom-link" style={{ textDecoration: 'none' }}>
+          <Link to="/top_rated" className="custom-link" style={{ textDecoration: 'none' }}>
             Top Rated
           </Link>
-          <Link className="custom-link" style={{ textDecoration: 'none' }}>
+          <Link to="upcoming" className="custom-link" style={{ textDecoration: 'none' }}>
             Upcoming
           </Link>
         </div>
